@@ -97,7 +97,6 @@ public class MultipartFormDataBody extends BoundaryEmitter implements AsyncHttpR
                         setDataCallback(new DataCallback() {
                             @Override
                             public void onDataAvailable(DataEmitter emitter, ByteBufferList bb) {
-                                
                                 //let bb not be null and print log
                                 //by Lucien Hsu
                                 if (bb == null) {
