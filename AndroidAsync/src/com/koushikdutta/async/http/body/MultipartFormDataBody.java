@@ -117,7 +117,7 @@ public class MultipartFormDataBody extends BoundaryEmitter implements AsyncHttpR
                                     Log.d("MultipartFormDataBody", "onDataAvailable: lastData: " + lastData);
                                     lastData = new ByteBufferList();
                                 }
-                                bb.get(lastData);
+                                //bb.get(lastData);
                                 
                             }
                         });
