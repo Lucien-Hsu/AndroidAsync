@@ -103,9 +103,19 @@ public class MultipartFormDataBody extends BoundaryEmitter implements AsyncHttpR
                                 //by Lucien Hsu
                                 if (bb == null) {
                                     //print log
+                                    Log.d("MultipartFormDataBody", "onDataAvailable: (bb == null)");
                                     Log.d("MultipartFormDataBody", "onDataAvailable: bb: " + bb);
                                     Log.d("MultipartFormDataBody", "onDataAvailable: lastData: " + lastData);
                                     bb = new ByteBufferList();
+                                }
+                                
+                                //let lastData not be null and print log
+                                if (lastData == null) {
+                                    //print log
+                                    Log.d("MultipartFormDataBody", "onDataAvailable: (lastData == null)");
+                                    Log.d("MultipartFormDataBody", "onDataAvailable: bb: " + bb);
+                                    Log.d("MultipartFormDataBody", "onDataAvailable: lastData: " + lastData);
+                                    lastData = new ByteBufferList();
                                 }
                                 bb.get(lastData);
                                 
